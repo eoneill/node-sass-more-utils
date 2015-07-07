@@ -47,14 +47,17 @@ var $example = moreSassUtils.toSass(example);
 var simple = [1, 2, 3, 4];
 var $simple = moreSassUtils.toSass(simple);
 
-var commaSeparated = [1, 2, 3, 4];
-var $commaSeparated = moreSassUtils.toSass(commaSeparated. {
-  separator: true
+var list = [1, 2, 3, 4];
+var $commaSeparated = moreSassUtils.toSass(list, {
+  separator: true // default
+});
+var $spaceSeparated = moreSassUtils.toSass(list, {
+  separator: false
 });
 
 var simpleNumber = 10;
 var $simpleNumber = moreSassUtils.toSass(simpleNumber);
 var $simpleNumberWithUnits = moreSassUtils.toSass(simpleNumber, {
-  units: 'px'
+  unit: "px"
 });
 ```
