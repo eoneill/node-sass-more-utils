@@ -1,0 +1,40 @@
+{
+  "name": "node-sass-more-utils",
+  "version": "0.0.1",
+  "description": "More Sass utilities for node-sass.",
+  "license": "Apache License 2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eoneill/node-sass-more-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eoneill/node-sass-more-utils/issues"
+  },
+  "engines": {
+    "node": ">= 0.12"
+  },
+  "homepage": "https://github.com/eoneill/node-sass-more-utils",
+  "author": {
+    "name": "Eugene ONeill",
+    "email": "",
+    "url": "https://github.com/eoneill"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/gulp test"
+  },
+  "devDependencies": {
+    "eyeglass-dev-eslint": "1.0.1",
+    "gulp": "^3.9.0",
+    "gulp-bump": "^0.3.1",
+    "gulp-eslint": "0.15.0",
+    "gulp-git": "^1.2.4",
+    "gulp-mocha": "^2.1.2",
+    "gulp-prompt": "^0.1.2",
+    "gulp-tag-version": "^1.2.1",
+    "mocha": "^2.2.5",
+    "node-sass": "^3.2.0",
+    "node-sass-utils": "^1.1.1",
+    "should": ">= 7.0.1"
+  }
+}
