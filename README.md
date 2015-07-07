@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/eoneill/node-sass-more-utils.svg)](https://travis-ci.org/eoneill/node-sass-more-utils)
 [![Version](https://img.shields.io/npm/v/node-sass-more-utils.svg)](https://www.npmjs.com/package/node-sass-more-utils)
-[![License](https://img.shields.io/npm/l/node-sass-more-utils.svg)](https://www.npmjs.com/package/node-sass-more-utils)
+[![License](https://img.shields.io/npm/l/node-sass-more-utils.svg)](./LICENSE)
 
 
 This package provides _even more_ helpers for working with the Sass values that `node-sass` passes to javascript functions that are exposed as sass functions.
