@@ -7,9 +7,10 @@ var tagVersion = require("gulp-tag-version");
 
 var pkgSource = ["./package.json"];
 
+var versionTypes = ["patch", "minor", "major"];
+
 module.exports = function(gulp, depends) {
   function increment(type) {
-    console.log("type is...", type);
     // get all the files to bump version in
     return gulp.src(pkgSource)
       // bump the version number in those files
@@ -28,7 +29,7 @@ module.exports = function(gulp, depends) {
           type: "checkbox",
           name: "type",
           message: "What type of release would you like to do?",
-          choices: ["patch", "minor", "major"]
+          choices: versionTypes
       }, function(result){
         var type = result.type[0];
         if (type) {
@@ -37,7 +38,7 @@ module.exports = function(gulp, depends) {
       }));
   });
 
-  gulp.task("release:patch", depends, increment.bind(increment, "patch"));
-  gulp.task("release:minor", depends, increment.bind(increment, "minor"));
-  gulp.task("release:major", depends, increment.bind(increment, "major"));
+  versionTypes.forEach(function(version) {
+    gulp.task("release:" + version, depends, increment.bind(increment, version));
+  });
 };
