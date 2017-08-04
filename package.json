@@ -1,6 +1,6 @@
 {
   "name": "node-sass-more-utils",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "More Sass utilities for node-sass.",
   "license": "Apache-2.0",
   "repository": {
