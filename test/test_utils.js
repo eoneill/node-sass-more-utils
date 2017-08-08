@@ -2,6 +2,7 @@
 
 var assert = require("assert");
 var sass = require("node-sass");
+var lodashIsEqual = require("lodash.isequal");
 var sassUtils = require("node-sass-utils")(sass);
 var moreSassUtils = require("../index")(sass, sassUtils);
 
@@ -22,6 +23,13 @@ describe("toSass", function () {
       unit: "px"
     });
     assert.equal("15px", sassString($result));
+    done();
+  });
+
+  it("should work with lodash.isequal (used by restyle-diff)", function (done) {
+    assert.ok(lodashIsEqual(
+      toJS( sass.types.Number(100, "%") ), toJS( sass.types.Number(100, "%") )
+    ), "100% should equal 100%");
     done();
   });
 
