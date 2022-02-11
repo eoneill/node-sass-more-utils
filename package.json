@@ -16,26 +16,30 @@
   "homepage": "https://github.com/eoneill/node-sass-more-utils",
   "author": {
     "name": "Eugene ONeill",
-    "email": "",
+    "email": "eoneill@linkedin.com",
     "url": "https://github.com/eoneill"
   },
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/gulp test"
+    "test": "gulp test"
   },
   "devDependencies": {
     "eyeglass-dev-eslint": "sass-eyeglass/eyeglass-dev-eslint",
-    "gulp": "^3.9.0",
-    "gulp-bump": "^2.7.0",
+    "gulp": "^4.0.2",
+    "gulp-bump": "^3.2.0",
     "gulp-eslint": "4.0.0",
-    "gulp-git": "^2.4.1",
-    "gulp-mocha": "^4.3.1",
-    "gulp-prompt": "^0.2.0",
-    "gulp-tag-version": "^1.3.0",
+    "gulp-git": "^2.10.1",
+    "gulp-mocha": "^8.0.0",
+    "gulp-prompt": "^1.2.0",
+    "gulp-tag-version": "^1.3.1",
     "lodash.isequal": "^4.5.0",
-    "mocha": "^3.5.0",
-    "node-sass": "^4.5.3",
+    "mocha": "^9.2.0",
+    "node-sass": "^4.11.0",
     "node-sass-utils": "^1.1.2",
     "should": ">= 7.0.4"
+  },
+  "volta": {
+    "node": "12.22.0",
+    "yarn": "1.22.4"
   }
 }
