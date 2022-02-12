@@ -11,7 +11,7 @@
     "url": "https://github.com/eoneill/node-sass-more-utils/issues"
   },
   "engines": {
-    "node": ">= 0.12"
+    "node": ">= 12.13"
   },
   "homepage": "https://github.com/eoneill/node-sass-more-utils",
   "author": {
@@ -23,19 +23,28 @@
   "scripts": {
     "test": "./node_modules/.bin/gulp test"
   },
+  "resolutions": {
+    "graceful-fs": "^4.2.9",
+    "natives": "1.1.3"
+  },
   "devDependencies": {
     "eyeglass-dev-eslint": "sass-eyeglass/eyeglass-dev-eslint",
     "gulp": "^3.9.0",
     "gulp-bump": "^2.7.0",
     "gulp-eslint": "4.0.0",
     "gulp-git": "^2.4.1",
-    "gulp-mocha": "^4.3.1",
+    "gulp-mocha": "^8.0.0",
     "gulp-prompt": "^0.2.0",
     "gulp-tag-version": "^1.3.0",
     "lodash.isequal": "^4.5.0",
-    "mocha": "^3.5.0",
-    "node-sass": "^4.5.3",
+    "mocha": "^9.2.0",
+    "node-sass": "^4.13.1",
     "node-sass-utils": "^1.1.2",
+    "sass": "^1.46.0",
     "should": ">= 7.0.4"
+  },
+  "volta": {
+    "node": "12.13.0",
+    "yarn": "1.22.4"
   }
 }
