@@ -1,7 +1,7 @@
 "use strict";
 
 var assert = require("assert");
-var sass = require("node-sass");
+var sass = require("sass");
 var lodashIsEqual = require("lodash.isequal");
 var sassUtils = require("node-sass-utils")(sass);
 var moreSassUtils = require("../index")(sass, sassUtils);
@@ -10,7 +10,7 @@ var sassString = sassUtils.sassString.bind(sassUtils);
 var toSass = moreSassUtils.toSass;
 var toJS = moreSassUtils.toJS;
 
-describe("node-sass: toSass", function () {
+describe("dart-sass: toSass", function () {
   // numbers
   it("should cast a number to a Sass number", function (done) {
     var $result = toSass(15);
@@ -28,7 +28,7 @@ describe("node-sass: toSass", function () {
 
   it("should work with lodash.isequal (used by restyle-diff)", function (done) {
     assert.ok(lodashIsEqual(
-      toJS( sass.types.Number(100, "%") ), toJS( sass.types.Number(100, "%") )
+      toJS( new sass.types.Number(100, "%") ), toJS( new sass.types.Number(100, "%") )
     ), "100% should equal 100%");
     done();
   });
@@ -130,10 +130,10 @@ describe("node-sass: toSass", function () {
   });
 });
 
-describe("node-sass: toJS", function () {
+describe("dart-sass: toJS", function () {
   // numbers
   it("should cast a Sass number to a SassJsNumber", function (done) {
-    var $num = sass.types.Number(15);
+    var $num = new sass.types.Number(15);
     var result = toJS($num);
     assert.equal(true, result instanceof moreSassUtils.SassJsNumber);
     assert.equal(15, result.value);
@@ -142,7 +142,7 @@ describe("node-sass: toJS", function () {
   });
 
   it("should cast a Sass number with units to a SassJsNumber", function (done) {
-    var $num = sass.types.Number(15, "px");
+    var $num = new sass.types.Number(15, "px");
     var result = toJS($num);
     assert.equal(true, result instanceof moreSassUtils.SassJsNumber);
     assert.equal(15, result.value);
